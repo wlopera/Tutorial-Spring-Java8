@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+	<bean id="jugador1" class="com.wlopera.beans.Jugador">
+		<property name="id" value="1"></property>
+		<property name="nombre" value="Andres Iniesta"></property>
+		<property name="equipo" ref="barcelona"></property>
+		<property name="camiseta" ref="camiseta1"></property>
+	</bean>
+	
+	<bean name="barcelona" class="com.wlopera.beans.Barcelona"></bean>
+	<bean name="juventus" class="com.wlopera.beans.Juventus"></bean>
+	
+	<bean name="camiseta1" class="com.wlopera.beans.Camiseta">
+		<property name="id" value="1"></property>
+		<property name="numero" value="10"></property>
+		<property name="marca" ref="marca1"></property>
+	</bean>
+	
+	<bean id="marca1" class="com.wlopera.beans.Marca">
+		<property name="id" value="1"></property>
+		<property name="nombre" value="Adidas"></property>
+	</bean>
+	
+</beans>
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+	<context:annotation-config/>
+	
+	<bean id="messi" class="com.wlopera.beans.Jugador">
+		<property name="numero" value="10"></property>
+		<property name="nombre" value="Lionel Messi"></property>
+	</bean>
+
+	<bean id="barcelona" class="com.wlopera.beans.Barcelona">
+		<qualifier value="barcelonaQualifier"></qualifier>
+	</bean>
+
+	<bean id="juventus" class="com.wlopera.beans.Juventus">
+		<qualifier value="juventusQualifier"></qualifier>
+	</bean>
+	
+	<!-- <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean> 
+		<bean id="mundo" class="com.wlopera.beans.Mundo"> <property name="saludo" 
+		value="Hola Mundo - XML!"></property> </bean> <bean id="persona" class="com.wlopera.beans.Persona" 
+		scope="singleton"> <constructor-arg type="Integer" index="0" value="1"></constructor-arg> 
+		<constructor-arg type="String" index="2" value="Wilita Rambo"></constructor-arg> 
+		<constructor-arg type="String" index="1" value="William"></constructor-arg> 
+		<property name="pais" ref="pais"></property> </bean> <bean id="pais" class="com.wlopera.beans.Pais"> 
+		<property name="nombre" value="Venezuela"></property> <property name="ciudades"> 
+		<list> <ref bean="ciudad1"/> <ref bean="ciudad2"/> <ref bean="ciudad3"/> 
+		</list> </property> </bean> <bean id="ciudad1" class="com.wlopera.beans.Ciudad"> 
+		<property name="nombre" value="Caracas"></property> </bean> <bean id="ciudad2" 
+		class="com.wlopera.beans.Ciudad"> <property name="nombre" value="Maracay"></property> 
+		</bean> <bean id="ciudad3" class="com.wlopera.beans.Ciudad"> <property name="nombre" 
+		value="Valencia"></property> </bean> -->
+</beans>
+
